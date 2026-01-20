@@ -1,0 +1,13 @@
+{
+  "pegue-monte": [
+    {"id": 1, "nome": "Kit Festa Básica", "preco": "R$ 150,00", "img": "blink.jpeg"},
+    {"id": 2, "nome": "Kit Luxo", "preco": "R$ 300,00", "img": "kit2.jpg"},
+    {"id": 3, "nome": "Kit Teste", "preco": "R$ 300,00", "img": "kit2.jpg"}
+  ],
+  "cestas-de-presente": [
+    {"id": 4, "nome": "Cesta Café da Manhã", "preco": "R$ 80,00", "img": "cesta1.jpg"}
+  ],
+  "maquina-algodao-doce": [
+    {"id": 5, "nome": "Aluguel Máquina Profissional", "preco": "R$ 120,00", "img": "maq1.jpg"}
+  ]
+}
