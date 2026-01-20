@@ -1,0 +1,225 @@
+        /* Variáveis CSS para Cores */
+        :root {
+            --cor-principal: rgb(234, 175, 175); /* Rosa Choque - Algodão Doce */
+            --cor-secundaria: rgb(46, 57, 75); /* Azul Céu - Suavidade */
+            --cor-fundo: #FAFAFA; /* Branco Suave */
+            --cor-texto: #ffffff;
+            --cor-acento: #FFD700; /* Dourado/Amarelo */
+        }
+
+        /* RESET BÁSICO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1, h2 {
+            color: var(--cor-secundaria);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-secundaria);
+            line-height: 1.6;
+        }
+
+        /* CABEÇALHO E NAVEGAÇÃO */
+        .header {
+            background-color: rgb(46, 57, 75);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+    
+
+        .logo {
+            font-family: 'Pacifico', cursive; /* Fonte especial para a logo */
+            font-size: 2.2em;
+            color: var(--cor-principal);
+            text-decoration: none;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--cor-texto);
+            margin-left: 30px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--cor-principal);
+        }
+
+        /* SEÇÃO HERO (Destaque Principal) */
+        .hero {
+            background: linear-gradient(135deg, var(--cor-principal) 0%, rgb(255, 174, 174) 100%);
+            color: var(--cor-secundaria);
+            padding: 80px 5%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .wp-btn {
+            border-radius: 12px; 
+            gap: 10px; 
+            font-size: 16px; 
+            background-color: var(--cor-secundaria); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            font-weight: bold; 
+            color: white; 
+            border: none; 
+            width: 300px; 
+            height: 60px;
+            transition: all 0.4s;
+        }
+
+        .wp-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .wp-btn:active {
+            opacity: 0.8;
+        }
+
+        .cta-button {
+            background-color: var(--cor-secundaria);
+            color: var(--cor-texto);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* SEÇÕES DE CONTEÚDO */
+        .section {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: var(--cor-secundaria);
+            position: relative;
+        }
+        
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--cor-secundaria);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .div-machine {
+            display: flex;
+            gap: 2em;
+            align-items: center;
+        }
+
+        .div-machine img {
+            border-radius: 2px;
+            border-color: black;
+            box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+            border-top: 5px solid var(--cor-principal);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: var(--cor-principal);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        /* SEÇÃO DIFERENCIAL (Locação) */
+        #locacao .card {
+            border-top: 5px solid var(--cor-secundaria);
+        }
+        
+        #locacao .card h3 {
+            color: var(--cor-secundaria);
+        }
+        
+        /* FOOTER */
+        .footer {
+            background-color: var(--cor-secundaria);
+            color: white;
+            text-align: center;
+            padding: 30px 5%;
+            font-size: 0.9em;
+        }
+        
+        .footer a {
+            color: var(--cor-acento);
+            text-decoration: none;
+        }
+        
+        /* RESPONSIVIDADE BÁSICA */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .nav-menu a {
+                margin-left: 15px;
+            }
+            .header {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
