@@ -3,95 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Aluguel de Máquina de Algodão Doce é na Blink Locações! ✨ Transforme seu evento com um toque de doçura. Máquinas profissionais e suporte total. Garanta sua data hoje!">
     <title>Blink | Algodão Doce e Locação de Máquinas</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="imagens/blink transparente.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="header">
-        <a href="#" class="logo"><img src="imagens/blink.jpeg" width="200px"></a>
+    <header class="header hidden">
+        <a href="https://blinklocacoes.com.br" class="logo"><img src="imagens/blink transparente.png" width="200px" alt="Logo da blink"></a>
         <nav class="nav-menu">
-            <a href="#pedidos">Pedidos</a>
             <a href="#locacao">Locação de Máquinas</a>
-            <a href="#contato">Contato</a>
+            <a href="javascript:contato()"><span class="nav-contato">Contato</span></a>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Blink: O Sabor da Sua Festa Começa Aqui!</h1>
-        <p>Algodão doce artesanal, colorido e delicioso, feito sob medida, ou alugue a máquina e faça você mesmo!</p>
+
+    <section class="hero hidden">
+        <h1>Algodão doce: <span style="color: rgb(236, 91, 115);">Nostalgia</span> que atravessa gerações</h1>
+        <p>Equipamentos higienizados, modernos e fáceis de usar. Leve diversão profissional para o seu evento sem complicações.</p>
         <div style="display: flex; gap: 20px;">
-            <a href="#pedidos" class="cta-button" style="background-color: var(--cor-secundaria);">
-                Encomendar Algodão Doce
-            </a>
-            <a href="#locacao" class="cta-button" style="background-color: var(--cor-secundaria);">
-                Alugar a Máquina
+            <a href="javascript:contato()" class="cta-button" >
+                Entrar em contato
             </a>
         </div>
     </section>
 
-    <section id="pedidos" class="section">
-        <h2>Pedidos Personalizados</h2>
+    <br /> <br />
+    <h1 align="center">Locação de máquina de algodão doce para:</h1>
+    <h1 align="center" class="middle-text">Aniversários</h1>
+
+    <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+    <div class="carousel-container hidden">
+  <div class="carousel-slide">
+    <img src="imagens/aniversario.jpg" alt="Slide 1">
+    <img src="imagens/evento.jpg" alt="Slide 2">
+    <img src="imagens/inauguracao3.jpeg" alt="Slide 3">
+  </div>
+  </div>
+
+
+
+  
+
+  <div class="indicators">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+  <script src="js/carrossel.js"></script>
+
+
+    <main id="pedidos" class="section">
+        <h2>Por que alugar máquina de algodão doce?</h2>
         <div class="grid-container">
             <div class="card">
-                <h3>Algodões Doces Embalados</h3>
-                <p>Algodões doces embalados individualmente com cores e sabores que combinam com o tema da sua festa. Prontos para servir!</p>
-                <p style="margin-top: 15px; font-weight: 600;">A partir de R$ 3,50 / unidade</p>
+                <div class="img-ico"><img src="imagens/face-laugh-beam-regular-full.svg" width="70px" /></div>
+                <h3>Sucesso garantido com todas as idades!</h3>
+                <p>Não se engane, os adultos fazem fila tanto quanto as crianças! O algodão doce desperta uma memória afetiva que agrada a todos os convidados.</p>
             </div>
             <div class="card">
-                <h3>Algodão Doce no Copo</h3>
-                <p>Nossos famosos potes herméticos que mantêm o sabor e o frescor por mais tempo. Perfeito para presentear ou saborear em casa.</p>
-                <p style="margin-top: 15px; font-weight: 600;">Disponível em 4 sabores exclusivos!</p>
+                <div class="img-ico"><img src="imagens/arrow-trend-up-solid-full.svg" width="70px" /></div>
+                <h3>Baixo custo e alto impacto</h3>
+                <p>É uma das opções de entretenimento gastronômico com melhor custo-benefício. Com pouco investimento, você garante uma atração visual e saborosa por horas.</p>
             </div>
             <div class="card">
-                <h3>Algodão Doce Artesanal</h3>
-                <p>Experimente sabores inusitados: Limão Siciliano, Morango com Pimenta, ou o clássico de Baunilha. Cores naturais disponíveis!</p>
-                <p style="margin-top: 15px; font-weight: 600;">Peça seu orçamento personalizado!</p>
-            </div>
+                <div class="img-ico"><img src="imagens/user-solid-full.svg" width="70px" /></div>
+                <h3>Experiência ao vivo</h3>
+                <p>O algodão doce é preparado na hora na frente dos convidados, tornando-se uma atração divertida e interativa.</p>
+        </div>
+        <div class="card">
+                <div class="img-ico"><img src="imagens/mobile-screen-button-solid-full.svg" width="70px" /></div>
+                <h3>Deixe a festa mais bonita e encantadora</h3>
+                <p>Valoriza a decoração do evento, traz cor de charme pro ambiente. Um visual alegre que faz a diferença nas fotos!</p>
         </div>
         <br /> <br />
-         <a href="#" class="cta-button" style="margin-top: 80px;">Ver Catálogo Completo</a>
-    </section>
+    </main>
 
     <section id="locacao" class="section" style="background-color: #F0F8FF;">
         <h2>Locação de Máquinas</h2>
         <div>
 
         <div class="grid-container">
-            <div class="card">
-                <h3 align="center">Pacote Completo</h3>
-                
-                <div class="div-machine">
-                <img src="imagens/maquina.jpg" width="30%">
+            <div class="card">          
+                <div class="div-machine hidden">
+                <img src="imagens/maquina.jpg" width="30%" alt="Máquina de algodão INOVAMAQ doce AD-50 profissional">
 
-                <ul style="font-weight: bold;">
-                    <li style="list-style: none; font-size: 20px;">Este pacote inclui:</li><br />
-                    <li><span style="color: palevioletred">Máquina profissional</span> INOVAMAQ AD-50</li>
-                    <li>+ 3 Cilindros Decorativos</li>
-                    <li>+ Monitor treinado</li>
-                    <li>+ Insumos</li>
-
-
-                </ul>
+                <h1>Entre em contato via <b>WhatsApp</b> e faça sua reserva!</h1>
+                <h1><b>(11) 95803-6274</b></h1>
                 </div>
-                <p style="margin-top: 15px; font-weight: 600;">Apenas R$119,90 por hora </p>
             </div>
         </div>
         </div></section>
-                <div style="width: 100%; display: flex; align-items: center; justify-content: center;"><button class="wp-btn" onclick="contato()" >Entre em contato <img src="imagens/icone_whatsapp.png" height="50px"> </button></div>
+                <div style="width: 100%; display: flex; align-items: center; justify-content: center;"><button class="wp-btn" onclick="contato()" >Entre em contato <img src="imagens/icone_whatsapp.png" width="50px" height="50px" alt="Icone Whatsapp"> </button></div>
         <br /> <br />
-
-        <script>
-            function contato() {
-                const url = 'https://wa.me/5511991533957?text=Ol%C3%A1%2C%20tenho%20interessa%20na%20m%C3%A1quina'
-                window.open(url, "_blank")
-            }
-        </script>
 
     <footer class="footer">
         <p>&copy; 2025 Blink. Todos os direitos reservados. | <a href="#contato">Fale Conosco</a></p>
     </footer>
 
+    <div onclick="contato()" class="whatsapp-btn-corner">
+    </div>
+    <script src="js/observer.js"></script>
+
+            <script>
+            function contato() {
+                const url = 'https://wa.me/5511958036274?text=Ol%C3%A1%2C%20tenho%20interessa%20na%20m%C3%A1quina'
+                window.open(url, "_blank")
+            }
+        </script>
 </body>
 </html>
