@@ -23,6 +23,11 @@
             background-color: var(--cor-fundo);
             color: var(--cor-secundaria);
             line-height: 1.6;
+            background-color: rgba(231, 231, 231, 0.2);
+        }
+
+        button {
+            cursor: pointer;
         }
 
         /* CABEÇALHO E NAVEGAÇÃO */
@@ -33,34 +38,68 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: white;
+            color: rgb(236, 91, 115);
         }
 
-    
-
-        .logo {
-            font-family: 'Pacifico', cursive; /* Fonte especial para a logo */
-            font-size: 2.2em;
-            color: var(--cor-principal);
-            text-decoration: none;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-        }
 
         .nav-menu a {
             text-decoration: none;
-            color: var(--cor-texto);
+            color: rgb(236, 91, 115);
             margin-left: 30px;
             font-weight: 600;
             transition: color 0.3s;
+            font-size: 1.2em;
         }
 
         .nav-menu a:hover {
             color: var(--cor-principal);
         }
 
+        .nav-contato {
+            border: 2px solid rgb(236, 91, 115);
+            padding: 0.8em 2em;
+            border-radius: 16px;
+        }
+        
+                @media (max-width: 1200px) {
+            .nav-contato {
+            border: 2px solid rgb(236, 91, 115);
+            padding: 0.4em 1em;
+            border-radius: 8px;
+        }
+
+        .nav-menu {
+            gap: 5px;
+        }
+
+        .header {
+            flex-direction: column;
+        }
+        }
+
+        @media (max-width: 800px) {
+            .nav-menu {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 100%;
+            }
+
+            .header{
+                height: 350px;
+            }
+
+            
+        }
+
+
+
         /* SEÇÃO HERO (Destaque Principal) */
         .hero {
-            background: linear-gradient(135deg, var(--cor-principal) 0%, rgb(255, 174, 174) 100%);
+            background-image: url('../imagens/algodaodoce.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             color: var(--cor-secundaria);
             padding: 80px 5%;
             text-align: center;
@@ -68,18 +107,27 @@
             flex-direction: column;
             align-items: center;
             gap: 20px;
+            max-height: 700px;
+            box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        .img-ico {
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
         .hero h1 {
             font-size: 3.5em;
             margin-bottom: 10px;
             font-weight: 700;
+            position: relative;
         }
 
         .hero p {
             font-size: 1.3em;
-            max-width: 700px;
-            margin-bottom: 30px;
+            position: relative;
         }
 
         .wp-btn {
@@ -107,11 +155,12 @@
         }
 
         .cta-button {
-            background-color: var(--cor-secundaria);
-            color: var(--cor-texto);
+            border: 2px solid vrgb(236, 91, 115);
+            background-color: rgba(46, 57, 75, 0.9);
+            color: rgb(236, 91, 115);
             padding: 15px 30px;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 50px;;
             font-weight: 700;
             font-size: 1.1em;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -119,9 +168,61 @@
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-        }
+            letter-spacing: 1px;
+            background-color: var(--cor-principal);
+            transform: scale(1.05);
+}
+
+        .carousel-container {
+  width: 800px;
+  overflow: hidden;
+  position: relative;
+  align-self: center;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Suaviza a transição */
+}
+
+.carousel-slide img {
+  width: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  animation: kenburns 10s ease-in-out infinite alternate;
+  height: 400px;
+}
+
+@keyframes kenburns {
+    0% {
+        transform: scale(0.93);
+    }
+    100% {
+        transform: scale(1.0); /* 8% de zoom é o limite seguro para não vazar pixels vizinhos */
+    }
+}
+
+/* Estilo dos Círculos */
+.indicators {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  align-self: flex-end;
+  transform: translatey(40px);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(131, 131, 131, 0.5); /* Branco semi-transparente */
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: rgb(255, 94, 121); /* Branco sólido quando ativo */
+}
+
 
         /* SEÇÕES DE CONTEÚDO */
         .section {
@@ -150,9 +251,13 @@
             display: flex;
             gap: 2em;
             align-items: center;
+            flex-direction: column;
         }
 
         .div-machine img {
+            width: 100%;
+            max-width: 700px;
+            object-fit: contain;
             border-radius: 2px;
             border-color: black;
             box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.05);
@@ -166,8 +271,50 @@
             margin: 0 auto;
         }
 
+        .middle-text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            color: rgb(255, 38, 74);
+            font-size: 2em;
+            align-self: center;
+            transition: all 0.5s ease-in-out; /* Controla a velocidade do efeito */
+            opacity: 1;
+        }
+
+        .about-us {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            padding: 1em 2em;
+        }
+
+        .fade-out {
+            opacity: 0;
+            transform: translateX(-100%) translateY(20px);
+
+            
+        }
+
+        .whatsapp-btn-corner {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            background-image: url(../imagens/icone_whatsapp.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            bottom: 15px;
+            right: 15px;
+            display: flex;
+            z-index: 100;
+            cursor: pointer;
+        }
+
         .card {
-            background-color: white;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    /* mantenha o resto */
             border-radius: 15px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
             padding: 30px;
@@ -223,3 +370,17 @@
                 gap: 10px;
             }
         }
+
+        .hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* Estado final: surge suavemente */
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
