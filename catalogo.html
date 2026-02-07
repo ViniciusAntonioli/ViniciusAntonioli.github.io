@@ -54,7 +54,7 @@
 
         function enviarWhatsApp(nomeProduto) {
             const telefone = "5511999999999"; // Seu número com DDD
-            const mensagem = encodeURIComponent(`Olá, tenho interesse no produto: ${nomeProduto}`);
+            const mensagem = (`Olá, tenho interesse no produto: ${nomeProduto}`);
             window.open(`https://wa.me/${telefone}?text=${mensagem}`, '_blank');
         }
 

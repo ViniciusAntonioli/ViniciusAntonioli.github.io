@@ -58,7 +58,7 @@ function mudaTexto() {
         fraseMeio.innerHTML = 'Eventos Escolares';
         break;
       case 2:
-        fraseMeio.innerHTML = 'Eventos promocionais/Inaugurações';
+        fraseMeio.innerHTML = 'Eventos promocionais<br />Inaugurações';
         break;
     }
     

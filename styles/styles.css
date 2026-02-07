@@ -23,23 +23,38 @@
             background-color: var(--cor-fundo);
             color: var(--cor-secundaria);
             line-height: 1.6;
-            background-color: rgba(231, 231, 231, 0.2);
-        }
+            margin: 0;
+            width: 100%; /* Troque 100vw por 100% para evitar barra de rolagem horizontal */
+            min-height: 100vh;
+}
 
         button {
             cursor: pointer;
         }
+.header {
+    background-color: var(--cor-secundaria); /* Usa a variável azul */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    padding: 15px 8%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        /* CABEÇALHO E NAVEGAÇÃO */
-        .header {
-            background-color: rgb(46, 57, 75);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: rgb(236, 91, 115);
-        }
+.header nav a {
+    color: white; 
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 25px;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.header nav a:hover {
+    color: rgb(236, 91, 115); /* O rosa entra no hover para dar vida */
+}
 
 
         .nav-menu a {
@@ -89,28 +104,33 @@
                 height: 350px;
             }
 
+
             
         }
 
 
 
         /* SEÇÃO HERO (Destaque Principal) */
-        .hero {
-            background-image: url('../imagens/algodaodoce.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            color: var(--cor-secundaria);
-            padding: 80px 5%;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            max-height: 700px;
-            box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.4);
-            position: relative;
-        }
+.hero {
+    /* Gradiente escuro embaixo para o texto branco "saltar" */
+    background-image: linear-gradient(to top, rgba(46, 57, 75, 0.9) 0%, rgba(0, 0, 0, 0) 60%), 
+                      url('../imagens/algodaodoce.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    color: white; /* Texto branco no hero para contrastar com a sombra */
+    padding: 120px 5% 60px 5%; /* Padding maior no topo para compensar o header */
+    text-align: center;
+    height: 600px; /* Defina uma altura fixa real */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o texto verticalmente no espaço da imagem */
+    align-items: center;
+    padding-top: 80px; /* Compensa a altura do header sticky */
+    margin-top: -80px; /* Opcional: faz a imagem "entrar" por baixo do header se ele for semi-transparente */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+}
 
         .img-ico {
             width: 100%;
@@ -156,8 +176,8 @@
 
         .cta-button {
             border: 2px solid vrgb(236, 91, 115);
-            background-color: rgba(46, 57, 75, 0.9);
-            color: rgb(236, 91, 115);
+            background-color: rgb(236, 91, 115);
+            color: white;
             padding: 15px 30px;
             text-decoration: none;
             border-radius: 50px;;
@@ -173,11 +193,15 @@
             transform: scale(1.05);
 }
 
+    .hero p {
+        margin-bottom: 15px;
+    }
+
         .carousel-container {
-  width: 800px;
-  overflow: hidden;
-  position: relative;
-  align-self: center;
+        width: 800px;
+        overflow: hidden;
+        position: relative;
+        align-self: center;
 }
 
 .carousel-slide {
@@ -222,12 +246,9 @@
 .dot.active {
   background-color: rgb(255, 94, 121); /* Branco sólido quando ativo */
 }
-
-
-        /* SEÇÕES DE CONTEÚDO */
         .section {
-            padding: 60px 5%;
             text-align: center;
+            margin-top: 20px;
         }
 
         .section h2 {
@@ -235,6 +256,10 @@
             margin-bottom: 40px;
             color: var(--cor-secundaria);
             position: relative;
+        }
+
+        #pedidos {
+            margin-top: 50px;
         }
         
         .section h2::after {
@@ -313,13 +338,15 @@
         .card {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-    /* mantenha o resto */
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 15px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
             padding: 30px;
             transition: transform 0.3s, box-shadow 0.3s;
             text-align: left;
+            text-wrap: balance; /* Distribui o texto de forma harmoniosa */
+            margin: 0 auto;     /* Garante que o bloco esteja centralizado */
+            max-width: 90%;    /* Evita que o texto encoste nas bordas do card */
             border-top: 5px solid var(--cor-principal);
         }
 
