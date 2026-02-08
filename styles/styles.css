@@ -83,6 +83,8 @@
             border-radius: 8px;
         }
 
+
+
         .nav-menu {
             gap: 5px;
         }
@@ -92,7 +94,26 @@
         }
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 1000px) {
+                    h1 {
+                    font-size: 1.4em;
+                     }
+                    h2 {
+                        font-size: 0.6em;
+                    }
+
+                    .middle-text {
+            font-size: 1em;
+        }
+
+
+                    .hero h1 {
+            font-size: clamp(2rem, 5vw, 4rem); /* Responsivo automaticamente */
+            margin-bottom: 10px;
+            font-weight: 700;
+            position: relative;
+        }
+
             .nav-menu {
                 display: flex;
                 flex-direction: column;
@@ -103,7 +124,6 @@
             .header{
                 height: 350px;
             }
-
 
             
         }
@@ -127,10 +147,11 @@
     flex-direction: column;
     justify-content: center; /* Centraliza o texto verticalmente no espaço da imagem */
     align-items: center;
-    padding-top: 80px; /* Compensa a altura do header sticky */
+    padding-top: 100px; /* Compensa a altura do header sticky */
     margin-top: -80px; /* Opcional: faz a imagem "entrar" por baixo do header se ele for semi-transparente */
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
 }
+
 
         .img-ico {
             width: 100%;
@@ -139,10 +160,14 @@
         }
 
         .hero h1 {
-            font-size: 3.5em;
+            font-size: 3em; /* Responsivo automaticamente */
             margin-bottom: 10px;
             font-weight: 700;
             position: relative;
+        }
+
+        h1 {
+            font-size: 1.5em;
         }
 
         .hero p {
@@ -252,7 +277,7 @@
         }
 
         .section h2 {
-            font-size: 2.5em;
+            font-size: clamp(2rem, 5vw, 4rem); /* Responsivo automaticamente */
             margin-bottom: 40px;
             color: var(--cor-secundaria);
             position: relative;
@@ -364,6 +389,10 @@
         /* SEÇÃO DIFERENCIAL (Locação) */
         #locacao .card {
             border-top: 5px solid var(--cor-secundaria);
+            text-align: center;
+            text-wrap: balance; /* Distribui o texto de forma harmoniosa */
+            margin: 0 auto;     /* Garante que o bloco esteja centralizado */
+            max-width: 90%;
         }
         
         #locacao .card h3 {
@@ -384,11 +413,7 @@
             text-decoration: none;
         }
         
-        /* RESPONSIVIDADE BÁSICA */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5em;
-            }
             .nav-menu a {
                 margin-left: 15px;
             }
@@ -396,6 +421,15 @@
                 flex-direction: column;
                 gap: 10px;
             }
+            
+            .hero {
+                padding-top: 150px;
+            }
+
+            
+        .hero h1 {
+            font-size: 2em; /* Responsivo automaticamente */
+        }
         }
 
         .hidden {
